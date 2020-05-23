@@ -1,0 +1,45 @@
+void moveServo();
+void parse_latitude();
+void parsing_GGA();
+void parse_gps_message();
+void parsing_gga();
+void servo_init();
+void paket(char inisial,uint8_t Lport);
+void init_serial(char channel);
+void write(char channel,unsigned char c);
+unsigned char read(char channel );
+void konversi_ascii(int VALUE, char digit);
+void ascii(char channel, int VALUE, char digit);
+void coascii(int VALUE, char digit);
+void string(char channel, char *ss);
+void parsing_rmc();
+//RC MANUAL VOID DECLARATION
+void get_signal_and_update();
+uint16_t get_signal(uint8_t xPin);
+uint8_t tempData[4];
+void switch_header();
+void switcherByRC();
+void get_servo_and_update() ;
+unsigned char read(char channel );
+void sendGround();
+uint8_t dxCRC();
+void storeServo(uint8_t sig);
+uint8_t servoCRC(uint8_t much);
+void as(int VALUE, char digit);
+void EEPROM_write(unsigned int uiAddress, unsigned char ucData);
+void count_servo_pulse();
+void servoSet(uint8_t servo, uint16_t time /* microseconds */);
+void get_gps();
+unsigned char stringToByte(char digit1,char digit2);
+int Tbearing(float flat1, float flon1, float flat2, float flon2);
+void NMEA_koma();
+uint8_t CRC_WPFLASH(uint8_t much);
+void intro();
+void PID(int Htarget,int CurH,uint8_t Ch);
+void Auto_Flight();	
+volatile float latx[2],longx[2],altx[1];
+
+void getAltKoma();
+float calc_distance(float flat1, float flon1, float flat2, float flon2);
+int calc_bearing(float flat1, float flon1, float flat2, float flon2);
+
